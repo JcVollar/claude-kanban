@@ -1,8 +1,4 @@
 {
-  "env": {
-    "KANBAN_URL": "https://YOUR-NOTES-APP-DOMAIN",
-    "KANBAN_TOKEN": "sat_PASTE_THE_KEY_FROM_tokens/create"
-  },
   "hooks": {
     "Stop": [
       { "hooks": [{ "type": "command", "command": "~/bin/kanban-hook.sh", "async": true }] }
