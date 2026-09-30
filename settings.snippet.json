@@ -1,0 +1,20 @@
+{
+  "env": {
+    "KANBAN_URL": "https://YOUR-NOTES-APP-DOMAIN",
+    "KANBAN_TOKEN": "sat_PASTE_THE_KEY_FROM_tokens/create"
+  },
+  "hooks": {
+    "Stop": [
+      { "hooks": [{ "type": "command", "command": "~/bin/kanban-hook.sh", "async": true }] }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt|elicitation_dialog|elicitation_url_dialog|agent_needs_input",
+        "hooks": [{ "type": "command", "command": "~/bin/kanban-hook.sh", "async": true }]
+      }
+    ],
+    "UserPromptSubmit": [
+      { "hooks": [{ "type": "command", "command": "~/bin/kanban-hook.sh", "async": true }] }
+    ]
+  }
+}
